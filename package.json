@@ -1,5 +1,5 @@
 {
-  "name": "bsv-p2p",
+  "name": "p2p-cash",
   "version": "1.1.7",
   "description": "Communicate on the Bitcoin P2P network with minimal overhead or dependencies",
   "main": "./lib/index.js",
@@ -12,16 +12,21 @@
     "test": "ts-node ./tests/index.ts",
     "build": "tsc",
     "docs": "typedoc",
-    "prepare": "npm run build && npm run docs"
+    "prepare": "yarn build && yarn docs"
   },
   "author": "Kevin Johnson <kevinejohn@gmail.com>",
   "contributors": [
-    "Andrew Johnson <andrewj@hey.com>"
+    "Andrew Johnson <andrewj@hey.com>",
+    "mainnet-pat"
   ],
   "license": "MIT",
   "dependencies": {
-    "bsv-minimal": "^1.1.2",
-    "source-map-support": "^0.5.21"
+    "@types/ws": "^8.5.4",
+    "async-mutex": "^0.4.0",
+    "bitcoin-minimal": "^1.1.5",
+    "isomorphic-ws": "^5.0.0",
+    "source-map-support": "^0.5.21",
+    "ws": "^8.12.0"
   },
   "devDependencies": {
     "@types/node": "^18.11.6",
@@ -36,6 +41,6 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/kevinejohn/bsv-p2p.git"
+    "url": "https://github.com/mainnet-pat/p2p-cash.git"
   }
 }

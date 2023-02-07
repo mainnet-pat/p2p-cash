@@ -1,4 +1,4 @@
-import { utils } from "bsv-minimal";
+import { utils } from "bitcoin-minimal";
 
 const { BufferReader, BufferWriter } = utils;
 
@@ -10,6 +10,7 @@ function read(buffer: Buffer) {
   const blocks: Buffer[] = [];
   const filtered_blocks: Buffer[] = [];
   const compact_blocks: Buffer[] = [];
+  const dsproofs: Buffer[] = [];
   const other: [Buffer, number][] = [];
   for (let i = 0; i < count; i++) {
     const type = br.readUInt32LE();
@@ -24,11 +25,13 @@ function read(buffer: Buffer) {
       filtered_blocks.push(hash);
     } else if (type === 4) {
       compact_blocks.push(hash);
+    } else if (type === 0x94A0) {
+      dsproofs.push(hash);
     } else {
       other.push([hash, type]);
     }
   }
-  return { errors, txs, blocks, filtered_blocks, compact_blocks, other };
+  return { errors, txs, blocks, filtered_blocks, compact_blocks, dsproofs, other };
 }
 
 interface WriteGetDataOptions {
@@ -37,6 +40,7 @@ interface WriteGetDataOptions {
   errors?: Buffer[];
   filtered_blocks?: Buffer[];
   compact_blocks?: Buffer[];
+  dsproofs?: Buffer[];
   other?: [Buffer, number][];
 }
 
@@ -46,6 +50,7 @@ function write({
   blocks = [],
   filtered_blocks = [],
   compact_blocks = [],
+  dsproofs = [],
   other = [],
 }: WriteGetDataOptions) {
   const bw = new BufferWriter();
@@ -55,6 +60,7 @@ function write({
       errors.length +
       filtered_blocks.length +
       compact_blocks.length +
+      dsproofs.length +
       other.length
   );
   for (const hash of errors) {
@@ -75,6 +81,10 @@ function write({
   }
   for (const hash of compact_blocks) {
     bw.writeUInt32LE(4);
+    bw.writeReverse(hash);
+  }
+  for (const hash of dsproofs) {
+    bw.writeUInt32LE(0x94A0);
     bw.writeReverse(hash);
   }
   for (const [hash, type] of other) {

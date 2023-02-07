@@ -1,4 +1,4 @@
-import { utils } from "bsv-minimal";
+import { utils } from "bitcoin-minimal";
 
 const { BufferReader, BufferWriter } = utils;
 

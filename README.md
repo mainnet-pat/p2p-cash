@@ -1,6 +1,6 @@
-# bsv-p2p
+# p2p-cash
 
-[![NPM Package](https://img.shields.io/npm/v/bsv-p2p.svg?style=flat-square)](https://www.npmjs.org/package/bsv-p2p)
+[![NPM Package](https://img.shields.io/npm/v/p2p-cash.svg?style=flat-square)](https://www.npmjs.org/package/p2p-cash)
 
 Communicate on the Bitcoin P2P network with minimal overhead or dependencies
 
@@ -8,7 +8,7 @@ Built to follow the protocol definition here: <https://en.bitcoin.it/wiki/Protoc
 
 ### Methods
 
-`npm i bsv-p2p`
+`yarn add p2p-cash`
 
 ### Docs
 
@@ -17,7 +17,7 @@ Built to follow the protocol definition here: <https://en.bitcoin.it/wiki/Protoc
 ### Basic use
 
 ```js
-const BitcoinP2P = require("bsv-p2p").default;
+const BitcoinP2P = require("p2p-cash").default;
 
 const node = "95.217.42.32"; // ipv4 or ipv6 address
 const ticker = "BSV"; // Also works with BTC, BCH, XEC and other bitcoin network protocols
@@ -49,7 +49,7 @@ peer.on("transactions", ({ node, header, finished, transactions }) => {
   // `finished` is true if these are the last transactions in a block
   for (const [index, transaction] of transactions) {
     // index: is the transaction index number in the block if header exists
-    // transaction: is a bsv-minimal lib object
+    // transaction: is a bitcoin-minimal lib object
     if (header) {
       console.log(
         `tx ${transaction
@@ -75,7 +75,7 @@ peer.fetchNewBlocks((hashes) => hashes); // Return filtered block hashes to down
 ### Other methods
 
 ```js
-const BitcoinP2P = require("bsv-p2p").default;
+const BitcoinP2P = require("p2p-cash").default;
 
 const node = "95.217.42.32"; // ipv4 or ipv6 address
 const port = 8333;
@@ -157,4 +157,4 @@ peer.disconnect();
 
 ### Tests
 
-`npm run test`
+`yarn test`

@@ -1,37 +1,36 @@
-[p2p-cash](../README.md) / PeerOptions
+[p2p-cash](../README.md) / ClusterOptions
 
-# Interface: PeerOptions
+# Interface: ClusterOptions
 
 ## Hierarchy
 
 - [`Options`](Options.md)
 
-  ↳ **`PeerOptions`**
+  ↳ **`ClusterOptions`**
 
 ## Table of contents
 
 ### Properties
 
-- [DEBUG\_LOG](PeerOptions.md#debug_log)
-- [autoReconnect](PeerOptions.md#autoreconnect)
-- [autoReconnectWait](PeerOptions.md#autoreconnectwait)
-- [disableExtmsg](PeerOptions.md#disableextmsg)
-- [listenRelay](PeerOptions.md#listenrelay)
-- [magic](PeerOptions.md#magic)
-- [node](PeerOptions.md#node)
-- [pingInterval](PeerOptions.md#pinginterval)
-- [port](PeerOptions.md#port)
-- [reconnectTimeout](PeerOptions.md#reconnecttimeout)
-- [startHeight](PeerOptions.md#startheight)
-- [stream](PeerOptions.md#stream)
-- [ticker](PeerOptions.md#ticker)
-- [timeoutConnect](PeerOptions.md#timeoutconnect)
-- [useSSL](PeerOptions.md#usessl)
-- [userAgent](PeerOptions.md#useragent)
-- [validate](PeerOptions.md#validate)
-- [version](PeerOptions.md#version)
-- [wsProxyNode](PeerOptions.md#wsproxynode)
-- [wsProxyPort](PeerOptions.md#wsproxyport)
+- [DEBUG\_LOG](ClusterOptions.md#debug_log)
+- [autoReconnect](ClusterOptions.md#autoreconnect)
+- [autoReconnectWait](ClusterOptions.md#autoreconnectwait)
+- [confidence](ClusterOptions.md#confidence)
+- [disableExtmsg](ClusterOptions.md#disableextmsg)
+- [distribution](ClusterOptions.md#distribution)
+- [listenRelay](ClusterOptions.md#listenrelay)
+- [magic](ClusterOptions.md#magic)
+- [order](ClusterOptions.md#order)
+- [pingInterval](ClusterOptions.md#pinginterval)
+- [reconnectTimeout](ClusterOptions.md#reconnecttimeout)
+- [startHeight](ClusterOptions.md#startheight)
+- [stream](ClusterOptions.md#stream)
+- [ticker](ClusterOptions.md#ticker)
+- [timeoutConnect](ClusterOptions.md#timeoutconnect)
+- [useSSL](ClusterOptions.md#usessl)
+- [userAgent](ClusterOptions.md#useragent)
+- [validate](ClusterOptions.md#validate)
+- [version](ClusterOptions.md#version)
 
 ## Properties
 
@@ -77,6 +76,16 @@ src/interfaces.ts:12
 
 ___
 
+### confidence
+
+• `Optional` **confidence**: `number`
+
+#### Defined in
+
+src/interfaces.ts:32
+
+___
+
 ### disableExtmsg
 
 • `Optional` **disableExtmsg**: `boolean`
@@ -88,6 +97,16 @@ ___
 #### Defined in
 
 src/interfaces.ts:15
+
+___
+
+### distribution
+
+• `Optional` **distribution**: `number`
+
+#### Defined in
+
+src/interfaces.ts:33
 
 ___
 
@@ -119,13 +138,13 @@ src/interfaces.ts:17
 
 ___
 
-### node
+### order
 
-• **node**: `string`
+• `Optional` **order**: [`ClusterOrder`](../enums/ClusterOrder.md)
 
 #### Defined in
 
-src/interfaces.ts:25
+src/interfaces.ts:34
 
 ___
 
@@ -140,16 +159,6 @@ ___
 #### Defined in
 
 src/interfaces.ts:14
-
-___
-
-### port
-
-• `Optional` **port**: `number`
-
-#### Defined in
-
-src/interfaces.ts:26
 
 ___
 
@@ -276,23 +285,3 @@ ___
 #### Defined in
 
 src/interfaces.ts:18
-
-___
-
-### wsProxyNode
-
-• `Optional` **wsProxyNode**: `string`
-
-#### Defined in
-
-src/interfaces.ts:27
-
-___
-
-### wsProxyPort
-
-• `Optional` **wsProxyPort**: `number`
-
-#### Defined in
-
-src/interfaces.ts:28

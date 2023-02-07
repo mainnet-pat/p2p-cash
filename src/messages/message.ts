@@ -1,4 +1,4 @@
-import { utils } from "bsv-minimal";
+import { utils } from "bitcoin-minimal";
 
 const { BufferReader, BufferWriter, Hash } = utils;
 
@@ -91,7 +91,7 @@ function read({ buffer, magic, extmsg }: ReadMessageOptions): {
 
     if (payload.length !== ext_length) {
       // console.log(
-      //   'bsv-p2p: Invalid length. Waiting for more data...',
+      //   'p2p-cash: Invalid length. Waiting for more data...',
       //   payload.length,
       //   length
       // )
@@ -103,7 +103,7 @@ function read({ buffer, magic, extmsg }: ReadMessageOptions): {
 
     if (payload.length !== length) {
       // console.log(
-      //   'bsv-p2p: Invalid length. Waiting for more data...',
+      //   'p2p-cash: Invalid length. Waiting for more data...',
       //   payload.length,
       //   length
       // )

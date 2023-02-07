@@ -24,7 +24,7 @@ const USER_AGENTS: { [key: string]: string } = {
   BCH: "/Bitcoin/",
   XEC: "/Bitcoin/",
   "BSV-STN": "/Bitcoin SV/",
-  DEFAULT: "/Bitcoin/",
+  DEFAULT: "/p2p-cash/",
 } as const;
 
 const MAX_PER_MSG = 50000 as const;

@@ -27,11 +27,11 @@ export default class CustomEvents {
     timeoutSeconds = 60 * 2 // 2 minutes
   ): Promise<any> {
     return new Promise((resolve, reject) => {
-      if (this.pending[successEvent]) {
-        this.pending[successEvent].clear();
-        this.pending[successEvent].reject(Error(`Retrying`));
-        delete this.pending[successEvent];
-      }
+      // if (this.pending[successEvent]) {
+      //   this.pending[successEvent].clear();
+      //   this.pending[successEvent].reject(Error(`Retrying`));
+      //   delete this.pending[successEvent];
+      // }
       let onSuccess: (params: any) => void;
       let onFailure: (message: string) => void;
       let timeout: NodeJS.Timeout;
@@ -51,6 +51,10 @@ export default class CustomEvents {
       };
       const reset = (time: number = 60 * 2) => {
         clear();
+        if (time === 0) {
+          removeListeners();
+          return;
+        }
         timeout = setTimeout(() => {
           removeListeners();
           reject(Error(`Timeout`));
@@ -81,6 +85,8 @@ export default class CustomEvents {
     });
   }
 
+  // if timeoutSeconds is 0, will clean up and stop waiting for event
+  // otherwise will postopne rejection upon timeout
   resetTimeout(successEvent: string, timeoutSeconds: number) {
     if (this.pending[successEvent]) {
       this.pending[successEvent].reset(timeoutSeconds);

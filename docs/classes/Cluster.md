@@ -1,101 +1,107 @@
-[bsv-p2p](../README.md) / default
+[p2p-cash](../README.md) / Cluster
 
-# Class: default
+# Class: Cluster
+
+High-level electrum client that provides transparent load balancing, confidence checking and/or low-latency polling.
 
 ## Hierarchy
 
 - `EventEmitter`
 
-  ↳ **`default`**
+  ↳ **`Cluster`**
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](default.md#constructor)
+- [constructor](Cluster.md#constructor)
 
 ### Properties
 
-- [DEBUG\_LOG](default.md#debug_log)
-- [autoReconnect](default.md#autoreconnect)
-- [autoReconnectWait](default.md#autoreconnectwait)
-- [buffers](default.md#buffers)
-- [connectOptions](default.md#connectoptions)
-- [connected](default.md#connected)
-- [disableExtmsg](default.md#disableextmsg)
-- [disconnects](default.md#disconnects)
-- [emitter](default.md#emitter)
-- [extmsg](default.md#extmsg)
-- [listenBlocks](default.md#listenblocks)
-- [listenTxs](default.md#listentxs)
-- [magic](default.md#magic)
-- [mempoolTxs](default.md#mempooltxs)
-- [node](default.md#node)
-- [port](default.md#port)
-- [promiseConnect](default.md#promiseconnect)
-- [socket](default.md#socket)
-- [start\_height](default.md#start_height)
-- [stream](default.md#stream)
-- [ticker](default.md#ticker)
-- [timeoutConnect](default.md#timeoutconnect)
-- [user\_agent](default.md#user_agent)
-- [validate](default.md#validate)
-- [version](default.md#version)
-- [captureRejectionSymbol](default.md#capturerejectionsymbol)
-- [captureRejections](default.md#capturerejections)
-- [defaultMaxListeners](default.md#defaultmaxlisteners)
-- [errorMonitor](default.md#errormonitor)
+- [clients](Cluster.md#clients)
+- [clusterOptions](Cluster.md#clusteroptions)
+- [connections](Cluster.md#connections)
+- [requestCounter](Cluster.md#requestcounter)
+- [requestLock](Cluster.md#requestlock)
+- [requestPromises](Cluster.md#requestpromises)
+- [responseLock](Cluster.md#responselock)
+- [status](Cluster.md#status)
+- [strategy](Cluster.md#strategy)
+- [timeout](Cluster.md#timeout)
+- [unsubscribes](Cluster.md#unsubscribes)
+- [captureRejectionSymbol](Cluster.md#capturerejectionsymbol)
+- [captureRejections](Cluster.md#capturerejections)
+- [defaultMaxListeners](Cluster.md#defaultmaxlisteners)
+- [errorMonitor](Cluster.md#errormonitor)
 
 ### Methods
 
-- [addListener](default.md#addlistener)
-- [broadcastTx](default.md#broadcasttx)
-- [broadcastTxs](default.md#broadcasttxs)
-- [connect](default.md#connect)
-- [disconnect](default.md#disconnect)
-- [emit](default.md#emit)
-- [eventNames](default.md#eventnames)
-- [fetchMempoolTxs](default.md#fetchmempooltxs)
-- [fetchNewBlocks](default.md#fetchnewblocks)
-- [getAddr](default.md#getaddr)
-- [getBlock](default.md#getblock)
-- [getBlocks](default.md#getblocks)
-- [getHeaders](default.md#getheaders)
-- [getMaxListeners](default.md#getmaxlisteners)
-- [getMempool](default.md#getmempool)
-- [getTxs](default.md#gettxs)
-- [listenerCount](default.md#listenercount)
-- [listeners](default.md#listeners)
-- [off](default.md#off)
-- [on](default.md#on)
-- [once](default.md#once)
-- [ping](default.md#ping)
-- [prependListener](default.md#prependlistener)
-- [prependOnceListener](default.md#prependoncelistener)
-- [rawListeners](default.md#rawlisteners)
-- [readMessage](default.md#readmessage)
-- [removeAllListeners](default.md#removealllisteners)
-- [removeListener](default.md#removelistener)
-- [sendMessage](default.md#sendmessage)
-- [setMaxListeners](default.md#setmaxlisteners)
-- [streamBlock](default.md#streamblock)
-- [getEventListeners](default.md#geteventlisteners)
-- [listenerCount](default.md#listenercount-1)
-- [on](default.md#on-1)
-- [once](default.md#once-1)
-- [setMaxListeners](default.md#setmaxlisteners-1)
+- [addListener](Cluster.md#addlistener)
+- [addServer](Cluster.md#addserver)
+- [broadcastTransaction](Cluster.md#broadcasttransaction)
+- [broadcastTransactions](Cluster.md#broadcasttransactions)
+- [connect](Cluster.md#connect)
+- [disconnect](Cluster.md#disconnect)
+- [emit](Cluster.md#emit)
+- [eventNames](Cluster.md#eventnames)
+- [getBlock](Cluster.md#getblock)
+- [getBlockHashes](Cluster.md#getblockhashes)
+- [getBlocks](Cluster.md#getblocks)
+- [getDSProof](Cluster.md#getdsproof)
+- [getDSProofs](Cluster.md#getdsproofs)
+- [getHeaders](Cluster.md#getheaders)
+- [getMaxListeners](Cluster.md#getmaxlisteners)
+- [getMempool](Cluster.md#getmempool)
+- [getMempoolTransactions](Cluster.md#getmempooltransactions)
+- [getPeerAddresses](Cluster.md#getpeeraddresses)
+- [getRawDSProof](Cluster.md#getrawdsproof)
+- [getRawDSProofs](Cluster.md#getrawdsproofs)
+- [getRawTransaction](Cluster.md#getrawtransaction)
+- [getRawTransactions](Cluster.md#getrawtransactions)
+- [getTransaction](Cluster.md#gettransaction)
+- [getTransactions](Cluster.md#gettransactions)
+- [listenerCount](Cluster.md#listenercount)
+- [listeners](Cluster.md#listeners)
+- [off](Cluster.md#off)
+- [on](Cluster.md#on)
+- [once](Cluster.md#once)
+- [ping](Cluster.md#ping)
+- [prependListener](Cluster.md#prependlistener)
+- [prependOnceListener](Cluster.md#prependoncelistener)
+- [rawListeners](Cluster.md#rawlisteners)
+- [ready](Cluster.md#ready)
+- [removeAllListeners](Cluster.md#removealllisteners)
+- [removeListener](Cluster.md#removelistener)
+- [request](Cluster.md#request)
+- [setMaxListeners](Cluster.md#setmaxlisteners)
+- [shutdown](Cluster.md#shutdown)
+- [startup](Cluster.md#startup)
+- [subscribe](Cluster.md#subscribe)
+- [watchAddressTransactions](Cluster.md#watchaddresstransactions)
+- [watchDSProofIds](Cluster.md#watchdsproofids)
+- [watchDSProofs](Cluster.md#watchdsproofs)
+- [watchMempoolRawTransactions](Cluster.md#watchmempoolrawtransactions)
+- [watchMempoolTransactionHashes](Cluster.md#watchmempooltransactionhashes)
+- [watchMempoolTransactions](Cluster.md#watchmempooltransactions)
+- [watchNewBlocks](Cluster.md#watchnewblocks)
+- [watchRawDSProofs](Cluster.md#watchrawdsproofs)
+- [getEventListeners](Cluster.md#geteventlisteners)
+- [listenerCount](Cluster.md#listenercount-1)
+- [on](Cluster.md#on-1)
+- [once](Cluster.md#once-1)
+- [setMaxListeners](Cluster.md#setmaxlisteners-1)
 
 ## Constructors
 
 ### constructor
 
-• **new default**(`__namedParameters`)
+• **new Cluster**(`__namedParameters`)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `__namedParameters` | [`PeerOptions`](../interfaces/PeerOptions.md) |
+| `__namedParameters` | [`ClusterOptions`](../interfaces/ClusterOptions.md) |
 
 #### Overrides
 
@@ -103,302 +109,131 @@ EventEmitter.constructor
 
 #### Defined in
 
-[src/index.ts:80](https://github.com/kevinejohn/bsv-p2p/blob/master/src/index.ts#L80)
+src/cluster.ts:69
 
 ## Properties
 
-### DEBUG\_LOG
+### clients
 
-• **DEBUG\_LOG**: `boolean`
+• **clients**: `Object` = `{}`
+
+#### Index signature
+
+▪ [index: `string`]: [`ClientConfig`](../interfaces/ClientConfig.md)
 
 #### Defined in
 
-[src/index.ts:66](https://github.com/kevinejohn/bsv-p2p/blob/master/src/index.ts#L66)
+src/cluster.ts:37
 
 ___
 
-### autoReconnect
+### clusterOptions
 
-• **autoReconnect**: `boolean`
+• **clusterOptions**: [`ClusterOptions`](../interfaces/ClusterOptions.md)
 
 #### Defined in
 
-[src/index.ts:57](https://github.com/kevinejohn/bsv-p2p/blob/master/src/index.ts#L57)
+src/cluster.ts:59
 
 ___
 
-### autoReconnectWait
+### connections
 
-• **autoReconnectWait**: `number`
+• **connections**: `number` = `0`
 
 #### Defined in
 
-[src/index.ts:58](https://github.com/kevinejohn/bsv-p2p/blob/master/src/index.ts#L58)
+src/cluster.ts:40
 
 ___
 
-### buffers
+### requestCounter
 
-• **buffers**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `block` | `default` |
-| `chunkNum` | `number` |
-| `data` | `Buffer`[] |
-| `downloadingBlock` | `boolean` |
-| `length` | `number` |
-| `needed` | `number` |
+• **requestCounter**: `number` = `0`
 
 #### Defined in
 
-[src/index.ts:68](https://github.com/kevinejohn/bsv-p2p/blob/master/src/index.ts#L68)
+src/cluster.ts:46
 
 ___
 
-### connectOptions
+### requestLock
 
-• `Optional` **connectOptions**: `VersionOptions`
+• **requestLock**: `Mutex`
 
 #### Defined in
 
-[src/index.ts:77](https://github.com/kevinejohn/bsv-p2p/blob/master/src/index.ts#L77)
+src/cluster.ts:52
 
 ___
 
-### connected
+### requestPromises
 
-• **connected**: `boolean`
+• **requestPromises**: `Object` = `{}`
+
+#### Index signature
+
+▪ [index: `number`]: `Promise`<`Error` \| [`RequestResponse`](../README.md#requestresponse)\>[]
 
 #### Defined in
 
-[src/index.ts:60](https://github.com/kevinejohn/bsv-p2p/blob/master/src/index.ts#L60)
+src/cluster.ts:49
 
 ___
 
-### disableExtmsg
+### responseLock
 
-• **disableExtmsg**: `boolean`
+• **responseLock**: `Mutex`
 
 #### Defined in
 
-[src/index.ts:59](https://github.com/kevinejohn/bsv-p2p/blob/master/src/index.ts#L59)
+src/cluster.ts:55
 
 ___
 
-### disconnects
+### status
 
-• **disconnects**: `number`
+• **status**: [`ClusterStatus`](../enums/ClusterStatus.md) = `ClusterStatus.DISABLED`
 
 #### Defined in
 
-[src/index.ts:64](https://github.com/kevinejohn/bsv-p2p/blob/master/src/index.ts#L64)
+src/cluster.ts:43
 
 ___
 
-### emitter
+### strategy
 
-• **emitter**: `default`
+• **strategy**: [`ClusterStrategy`](../interfaces/ClusterStrategy.md)
 
 #### Defined in
 
-[src/index.ts:67](https://github.com/kevinejohn/bsv-p2p/blob/master/src/index.ts#L67)
+src/cluster.ts:34
 
 ___
 
-### extmsg
+### timeout
 
-• **extmsg**: `boolean`
+• **timeout**: `number` = `DefaultParameters.TIMEOUT`
 
 #### Defined in
 
-[src/index.ts:63](https://github.com/kevinejohn/bsv-p2p/blob/master/src/index.ts#L63)
+src/cluster.ts:61
 
 ___
 
-### listenBlocks
+### unsubscribes
 
-• `Optional` **listenBlocks**: (`hashes`: `Buffer`[]) => `Buffer`[] \| `Promise`<`Buffer`[]\>
-
-#### Type declaration
-
-▸ (`hashes`): `Buffer`[] \| `Promise`<`Buffer`[]\>
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `hashes` | `Buffer`[] |
-
-##### Returns
-
-`Buffer`[] \| `Promise`<`Buffer`[]\>
+• **unsubscribes**: `WeakMap`<`object`, `Function`\>
 
 #### Defined in
 
-[src/index.ts:62](https://github.com/kevinejohn/bsv-p2p/blob/master/src/index.ts#L62)
-
-___
-
-### listenTxs
-
-• `Optional` **listenTxs**: (`txids`: `Buffer`[]) => `Buffer`[] \| `Promise`<`Buffer`[]\>
-
-#### Type declaration
-
-▸ (`txids`): `Buffer`[] \| `Promise`<`Buffer`[]\>
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `txids` | `Buffer`[] |
-
-##### Returns
-
-`Buffer`[] \| `Promise`<`Buffer`[]\>
-
-#### Defined in
-
-[src/index.ts:61](https://github.com/kevinejohn/bsv-p2p/blob/master/src/index.ts#L61)
-
-___
-
-### magic
-
-• **magic**: `Buffer`
-
-#### Defined in
-
-[src/index.ts:50](https://github.com/kevinejohn/bsv-p2p/blob/master/src/index.ts#L50)
-
-___
-
-### mempoolTxs
-
-• **mempoolTxs**: `boolean`
-
-#### Defined in
-
-[src/index.ts:54](https://github.com/kevinejohn/bsv-p2p/blob/master/src/index.ts#L54)
-
-___
-
-### node
-
-• **node**: `string`
-
-#### Defined in
-
-[src/index.ts:47](https://github.com/kevinejohn/bsv-p2p/blob/master/src/index.ts#L47)
-
-___
-
-### port
-
-• **port**: `number`
-
-#### Defined in
-
-[src/index.ts:48](https://github.com/kevinejohn/bsv-p2p/blob/master/src/index.ts#L48)
-
-___
-
-### promiseConnect
-
-• `Optional` **promiseConnect**: `any`
-
-#### Defined in
-
-[src/index.ts:78](https://github.com/kevinejohn/bsv-p2p/blob/master/src/index.ts#L78)
-
-___
-
-### socket
-
-• `Optional` **socket**: ``null`` \| `Socket`
-
-#### Defined in
-
-[src/index.ts:76](https://github.com/kevinejohn/bsv-p2p/blob/master/src/index.ts#L76)
-
-___
-
-### start\_height
-
-• `Optional` **start\_height**: `number`
-
-#### Defined in
-
-[src/index.ts:53](https://github.com/kevinejohn/bsv-p2p/blob/master/src/index.ts#L53)
-
-___
-
-### stream
-
-• **stream**: `boolean`
-
-#### Defined in
-
-[src/index.ts:55](https://github.com/kevinejohn/bsv-p2p/blob/master/src/index.ts#L55)
-
-___
-
-### ticker
-
-• **ticker**: `string`
-
-#### Defined in
-
-[src/index.ts:49](https://github.com/kevinejohn/bsv-p2p/blob/master/src/index.ts#L49)
-
-___
-
-### timeoutConnect
-
-• **timeoutConnect**: `number`
-
-#### Defined in
-
-[src/index.ts:65](https://github.com/kevinejohn/bsv-p2p/blob/master/src/index.ts#L65)
-
-___
-
-### user\_agent
-
-• `Optional` **user\_agent**: `string`
-
-#### Defined in
-
-[src/index.ts:52](https://github.com/kevinejohn/bsv-p2p/blob/master/src/index.ts#L52)
-
-___
-
-### validate
-
-• **validate**: `boolean`
-
-#### Defined in
-
-[src/index.ts:56](https://github.com/kevinejohn/bsv-p2p/blob/master/src/index.ts#L56)
-
-___
-
-### version
-
-• **version**: `number`
-
-#### Defined in
-
-[src/index.ts:51](https://github.com/kevinejohn/bsv-p2p/blob/master/src/index.ts#L51)
+src/cluster.ts:57
 
 ___
 
 ### captureRejectionSymbol
 
-▪ `Static` `Readonly` **captureRejectionSymbol**: typeof [`captureRejectionSymbol`](default.md#capturerejectionsymbol)
+▪ `Static` `Readonly` **captureRejectionSymbol**: typeof [`captureRejectionSymbol`](Peer.md#capturerejectionsymbol)
 
 #### Inherited from
 
@@ -442,7 +277,7 @@ ___
 
 ### errorMonitor
 
-▪ `Static` `Readonly` **errorMonitor**: typeof [`errorMonitor`](default.md#errormonitor)
+▪ `Static` `Readonly` **errorMonitor**: typeof [`errorMonitor`](Peer.md#errormonitor)
 
 This symbol shall be used to install a listener for only monitoring `'error'`
 events. Listeners installed using this symbol are called before the regular
@@ -464,13 +299,7 @@ node_modules/@types/node/ts4.8/events.d.ts:327
 
 ### addListener
 
-▸ **addListener**(`eventName`, `listener`): [`default`](default.md)
-
-Alias for `emitter.on(eventName, listener)`.
-
-**`Since`**
-
-v0.1.26
+▸ **addListener**(`eventName`, `listener`): [`Cluster`](Cluster.md)
 
 #### Parameters
 
@@ -481,21 +310,50 @@ v0.1.26
 
 #### Returns
 
-[`default`](default.md)
+[`Cluster`](Cluster.md)
 
-#### Inherited from
+#### Overrides
 
 EventEmitter.addListener
 
 #### Defined in
 
-node_modules/@types/node/ts4.8/events.d.ts:354
+src/cluster.ts:107
 
 ___
 
-### broadcastTx
+### addServer
 
-▸ **broadcastTx**(`transaction`, `timeoutSeconds?`): `Promise`<`void`\>
+▸ **addServer**(`options`, `autoConnect?`): `Promise`<`void`\>
+
+Adds a server to the cluster.
+
+**`Throws`**
+
+if the cluster's version is not a valid version string.
+
+#### Parameters
+
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `options` | [`PeerOptions`](../interfaces/PeerOptions.md) | `undefined` | - |
+| `autoConnect` | `boolean` | `true` | flag indicating whether the server should automatically connect (default true) |
+
+#### Returns
+
+`Promise`<`void`\>
+
+a promise that resolves when the connection has been initiated.
+
+#### Defined in
+
+src/cluster.ts:141
+
+___
+
+### broadcastTransaction
+
+▸ **broadcastTransaction**(`transaction`, `timeoutSeconds?`): `Promise`<`Buffer`\>
 
 #### Parameters
 
@@ -506,17 +364,17 @@ ___
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`<`Buffer`\>
 
 #### Defined in
 
-[src/index.ts:642](https://github.com/kevinejohn/bsv-p2p/blob/master/src/index.ts#L642)
+src/cluster.ts:748
 
 ___
 
-### broadcastTxs
+### broadcastTransactions
 
-▸ **broadcastTxs**(`transactions`, `timeoutSeconds?`): `Promise`<`PromiseSettledResult`<`void`\>[]\>
+▸ **broadcastTransactions**(`transactions`, `timeoutSeconds?`): `Promise`<`Buffer`[]\>
 
 #### Parameters
 
@@ -527,51 +385,43 @@ ___
 
 #### Returns
 
-`Promise`<`PromiseSettledResult`<`void`\>[]\>
+`Promise`<`Buffer`[]\>
 
 #### Defined in
 
-[src/index.ts:651](https://github.com/kevinejohn/bsv-p2p/blob/master/src/index.ts#L651)
+src/cluster.ts:753
 
 ___
 
 ### connect
 
-▸ **connect**(`options?`): `any`
+▸ **connect**(): `Promise`<`boolean`\>
 
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `options` | `undefined` \| `VersionOptions` |
+Force connect all added servers
 
 #### Returns
 
-`any`
+`Promise`<`boolean`\>
 
 #### Defined in
 
-[src/index.ts:449](https://github.com/kevinejohn/bsv-p2p/blob/master/src/index.ts#L449)
+src/cluster.ts:629
 
 ___
 
 ### disconnect
 
-▸ **disconnect**(`autoReconnect?`): `void`
+▸ **disconnect**(): `Promise`<`void`[]\>
 
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `autoReconnect` | `boolean` | `false` |
+Alias for shutdown
 
 #### Returns
 
-`void`
+`Promise`<`void`[]\>
 
 #### Defined in
 
-[src/index.ts:559](https://github.com/kevinejohn/bsv-p2p/blob/master/src/index.ts#L559)
+src/cluster.ts:676
 
 ___
 
@@ -680,104 +530,106 @@ node_modules/@types/node/ts4.8/events.d.ts:669
 
 ___
 
-### fetchMempoolTxs
-
-▸ **fetchMempoolTxs**(`filterTxids`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `filterTxids` | (`txids`: `Buffer`[]) => `Buffer`[] \| `Promise`<`Buffer`[]\> |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[src/index.ts:701](https://github.com/kevinejohn/bsv-p2p/blob/master/src/index.ts#L701)
-
-___
-
-### fetchNewBlocks
-
-▸ **fetchNewBlocks**(`filterBlocks`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `filterBlocks` | (`hashes`: `Buffer`[]) => `Buffer`[] \| `Promise`<`Buffer`[]\> |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[src/index.ts:709](https://github.com/kevinejohn/bsv-p2p/blob/master/src/index.ts#L709)
-
-___
-
-### getAddr
-
-▸ **getAddr**(`timeoutSeconds?`): `Promise`<{ `addrs`: `NetAddress`[] ; `node`: `string` ; `port`: `number` ; `ticker`: `string`  }\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `timeoutSeconds` | `number` |
-
-#### Returns
-
-`Promise`<{ `addrs`: `NetAddress`[] ; `node`: `string` ; `port`: `number` ; `ticker`: `string`  }\>
-
-#### Defined in
-
-[src/index.ts:679](https://github.com/kevinejohn/bsv-p2p/blob/master/src/index.ts#L679)
-
-___
-
 ### getBlock
 
-▸ **getBlock**(`hash`, `timeoutSeconds?`): `Promise`<[`GetBlockReturn`](../README.md#getblockreturn)\>
+▸ **getBlock**(`blockHash`): `Promise`<`default`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `hash` | `string` \| `Buffer` |
-| `timeoutSeconds?` | `number` |
+| `blockHash` | `Buffer` |
 
 #### Returns
 
-`Promise`<[`GetBlockReturn`](../README.md#getblockreturn)\>
+`Promise`<`default`\>
 
 #### Defined in
 
-[src/index.ts:615](https://github.com/kevinejohn/bsv-p2p/blob/master/src/index.ts#L615)
+src/cluster.ts:780
+
+___
+
+### getBlockHashes
+
+▸ **getBlockHashes**(`__namedParameters`): `Promise`<`default`[]\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `__namedParameters` | `Object` |
+| `__namedParameters.from?` | `Buffer` \| `Buffer`[] |
+| `__namedParameters.timeoutSeconds?` | `number` |
+| `__namedParameters.to?` | `Buffer` |
+
+#### Returns
+
+`Promise`<`default`[]\>
+
+#### Defined in
+
+src/cluster.ts:727
 
 ___
 
 ### getBlocks
 
-▸ **getBlocks**(`blocks`): `void`
+▸ **getBlocks**(`blockHashes`): `Promise`<`default`[]\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `blocks` | `Buffer`[] |
+| `blockHashes` | `Buffer`[] |
 
 #### Returns
 
-`void`
+`Promise`<`default`[]\>
 
 #### Defined in
 
-[src/index.ts:636](https://github.com/kevinejohn/bsv-p2p/blob/master/src/index.ts#L636)
+src/cluster.ts:776
+
+___
+
+### getDSProof
+
+▸ **getDSProof**(`dspId`): `Promise`<`default`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `dspId` | `Buffer` |
+
+#### Returns
+
+`Promise`<`default`\>
+
+#### Defined in
+
+src/cluster.ts:852
+
+___
+
+### getDSProofs
+
+▸ **getDSProofs**(`dspIds`): `Promise`<`default`[]\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `dspIds` | `Buffer`[] |
+
+#### Returns
+
+`Promise`<`default`[]\>
+
+#### Defined in
+
+src/cluster.ts:848
 
 ___
 
@@ -800,7 +652,7 @@ ___
 
 #### Defined in
 
-[src/index.ts:591](https://github.com/kevinejohn/bsv-p2p/blob/master/src/index.ts#L591)
+src/cluster.ts:715
 
 ___
 
@@ -809,7 +661,7 @@ ___
 ▸ **getMaxListeners**(): `number`
 
 Returns the current max listener value for the `EventEmitter` which is either
-set by `emitter.setMaxListeners(n)` or defaults to [defaultMaxListeners](default.md#defaultmaxlisteners).
+set by `emitter.setMaxListeners(n)` or defaults to [defaultMaxListeners](Cluster.md#defaultmaxlisteners).
 
 **`Since`**
 
@@ -831,35 +683,169 @@ ___
 
 ### getMempool
 
-▸ **getMempool**(): `void`
+▸ **getMempool**(): `Promise`<`Buffer`[]\>
 
 #### Returns
 
-`void`
+`Promise`<`Buffer`[]\>
 
 #### Defined in
 
-[src/index.ts:611](https://github.com/kevinejohn/bsv-p2p/blob/master/src/index.ts#L611)
+src/cluster.ts:739
 
 ___
 
-### getTxs
+### getMempoolTransactions
 
-▸ **getTxs**(`txs`): `void`
+▸ **getMempoolTransactions**(): `Promise`<`default`[]\>
+
+#### Returns
+
+`Promise`<`default`[]\>
+
+#### Defined in
+
+src/cluster.ts:743
+
+___
+
+### getPeerAddresses
+
+▸ **getPeerAddresses**(`timeoutSeconds?`): `Promise`<`NetAddress`[][]\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `txs` | `Buffer`[] |
+| `timeoutSeconds` | `number` |
 
 #### Returns
 
-`void`
+`Promise`<`NetAddress`[][]\>
 
 #### Defined in
 
-[src/index.ts:673](https://github.com/kevinejohn/bsv-p2p/blob/master/src/index.ts#L673)
+src/cluster.ts:883
+
+___
+
+### getRawDSProof
+
+▸ **getRawDSProof**(`dspId`): `Promise`<`Buffer`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `dspId` | `Buffer` |
+
+#### Returns
+
+`Promise`<`Buffer`\>
+
+#### Defined in
+
+src/cluster.ts:844
+
+___
+
+### getRawDSProofs
+
+▸ **getRawDSProofs**(`dspIds`): `Promise`<`Buffer`[]\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `dspIds` | `Buffer`[] |
+
+#### Returns
+
+`Promise`<`Buffer`[]\>
+
+#### Defined in
+
+src/cluster.ts:840
+
+___
+
+### getRawTransaction
+
+▸ **getRawTransaction**(`txHash`): `Promise`<`Buffer`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `txHash` | `Buffer` |
+
+#### Returns
+
+`Promise`<`Buffer`\>
+
+#### Defined in
+
+src/cluster.ts:764
+
+___
+
+### getRawTransactions
+
+▸ **getRawTransactions**(`txHashes`): `Promise`<`Buffer`[]\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `txHashes` | `Buffer`[] |
+
+#### Returns
+
+`Promise`<`Buffer`[]\>
+
+#### Defined in
+
+src/cluster.ts:760
+
+___
+
+### getTransaction
+
+▸ **getTransaction**(`txHash`): `Promise`<`default`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `txHash` | `Buffer` |
+
+#### Returns
+
+`Promise`<`default`\>
+
+#### Defined in
+
+src/cluster.ts:772
+
+___
+
+### getTransactions
+
+▸ **getTransactions**(`txHashes`): `Promise`<`default`[]\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `txHashes` | `Buffer`[] |
+
+#### Returns
+
+`Promise`<`default`[]\>
+
+#### Defined in
+
+src/cluster.ts:768
 
 ___
 
@@ -933,13 +919,7 @@ ___
 
 ### off
 
-▸ **off**(`eventName`, `listener`): [`default`](default.md)
-
-Alias for `emitter.removeListener()`.
-
-**`Since`**
-
-v10.0.0
+▸ **off**(`eventName`, `listener`): [`Cluster`](Cluster.md)
 
 #### Parameters
 
@@ -950,76 +930,46 @@ v10.0.0
 
 #### Returns
 
-[`default`](default.md)
+[`Cluster`](Cluster.md)
 
-#### Inherited from
+#### Overrides
 
 EventEmitter.off
 
 #### Defined in
 
-node_modules/@types/node/ts4.8/events.d.ts:499
+src/cluster.ts:116
 
 ___
 
 ### on
 
-▸ **on**(`eventName`, `listener`): [`default`](default.md)
-
-Adds the `listener` function to the end of the listeners array for the
-event named `eventName`. No checks are made to see if the `listener` has
-already been added. Multiple calls passing the same combination of `eventName`and `listener` will result in the `listener` being added, and called, multiple
-times.
-
-```js
-server.on('connection', (stream) => {
-  console.log('someone connected!');
-});
-```
-
-Returns a reference to the `EventEmitter`, so that calls can be chained.
-
-By default, event listeners are invoked in the order they are added. The`emitter.prependListener()` method can be used as an alternative to add the
-event listener to the beginning of the listeners array.
-
-```js
-const myEE = new EventEmitter();
-myEE.on('foo', () => console.log('a'));
-myEE.prependListener('foo', () => console.log('b'));
-myEE.emit('foo');
-// Prints:
-//   b
-//   a
-```
-
-**`Since`**
-
-v0.1.101
+▸ **on**(`eventName`, `listener`): [`Cluster`](Cluster.md)
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `eventName` | `string` \| `symbol` | The name of the event. |
-| `listener` | (...`args`: `any`[]) => `void` | The callback function |
+| Name | Type |
+| :------ | :------ |
+| `eventName` | `string` \| `symbol` |
+| `listener` | (...`args`: `any`[]) => `void` |
 
 #### Returns
 
-[`default`](default.md)
+[`Cluster`](Cluster.md)
 
-#### Inherited from
+#### Overrides
 
 EventEmitter.on
 
 #### Defined in
 
-node_modules/@types/node/ts4.8/events.d.ts:385
+src/cluster.ts:102
 
 ___
 
 ### once
 
-▸ **once**(`eventName`, `listener`): [`default`](default.md)
+▸ **once**(`eventName`, `listener`): [`Cluster`](Cluster.md)
 
 Adds a **one-time**`listener` function for the event named `eventName`. The
 next time `eventName` is triggered, this listener is removed and then invoked.
@@ -1058,7 +1008,7 @@ v0.3.0
 
 #### Returns
 
-[`default`](default.md)
+[`Cluster`](Cluster.md)
 
 #### Inherited from
 
@@ -1072,7 +1022,7 @@ ___
 
 ### ping
 
-▸ **ping**(`timeoutSeconds?`): `Promise`<`number`\>
+▸ **ping**(`timeoutSeconds?`): `Promise`<`number`[]\>
 
 #### Parameters
 
@@ -1082,17 +1032,17 @@ ___
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`<`number`[]\>
 
 #### Defined in
 
-[src/index.ts:691](https://github.com/kevinejohn/bsv-p2p/blob/master/src/index.ts#L691)
+src/cluster.ts:887
 
 ___
 
 ### prependListener
 
-▸ **prependListener**(`eventName`, `listener`): [`default`](default.md)
+▸ **prependListener**(`eventName`, `listener`): [`Cluster`](Cluster.md)
 
 Adds the `listener` function to the _beginning_ of the listeners array for the
 event named `eventName`. No checks are made to see if the `listener` has
@@ -1120,7 +1070,7 @@ v6.0.0
 
 #### Returns
 
-[`default`](default.md)
+[`Cluster`](Cluster.md)
 
 #### Inherited from
 
@@ -1134,7 +1084,7 @@ ___
 
 ### prependOnceListener
 
-▸ **prependOnceListener**(`eventName`, `listener`): [`default`](default.md)
+▸ **prependOnceListener**(`eventName`, `listener`): [`Cluster`](Cluster.md)
 
 Adds a **one-time**`listener` function for the event named `eventName` to the _beginning_ of the listeners array. The next time `eventName` is triggered, this
 listener is removed, and then invoked.
@@ -1160,7 +1110,7 @@ v6.0.0
 
 #### Returns
 
-[`default`](default.md)
+[`Cluster`](Cluster.md)
 
 #### Inherited from
 
@@ -1227,29 +1177,27 @@ node_modules/@types/node/ts4.8/events.d.ts:569
 
 ___
 
-### readMessage
+### ready
 
-▸ **readMessage**(`buffer`): `void`
+▸ **ready**(): `Promise`<`boolean`\>
 
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `buffer` | `Buffer` |
+Provides a method to check or wait for the cluster to become ready.
 
 #### Returns
 
-`void`
+`Promise`<`boolean`\>
+
+a promise that resolves when the required servers are available.
 
 #### Defined in
 
-[src/index.ts:231](https://github.com/kevinejohn/bsv-p2p/blob/master/src/index.ts#L231)
+src/cluster.ts:580
 
 ___
 
 ### removeAllListeners
 
-▸ **removeAllListeners**(`event?`): [`default`](default.md)
+▸ **removeAllListeners**(`event?`): [`Cluster`](Cluster.md)
 
 Removes all listeners, or those of the specified `eventName`.
 
@@ -1271,7 +1219,7 @@ v0.1.26
 
 #### Returns
 
-[`default`](default.md)
+[`Cluster`](Cluster.md)
 
 #### Inherited from
 
@@ -1285,88 +1233,7 @@ ___
 
 ### removeListener
 
-▸ **removeListener**(`eventName`, `listener`): [`default`](default.md)
-
-Removes the specified `listener` from the listener array for the event named`eventName`.
-
-```js
-const callback = (stream) => {
-  console.log('someone connected!');
-};
-server.on('connection', callback);
-// ...
-server.removeListener('connection', callback);
-```
-
-`removeListener()` will remove, at most, one instance of a listener from the
-listener array. If any single listener has been added multiple times to the
-listener array for the specified `eventName`, then `removeListener()` must be
-called multiple times to remove each instance.
-
-Once an event is emitted, all listeners attached to it at the
-time of emitting are called in order. This implies that any`removeListener()` or `removeAllListeners()` calls _after_ emitting and _before_ the last listener finishes execution
-will not remove them from`emit()` in progress. Subsequent events behave as expected.
-
-```js
-const myEmitter = new MyEmitter();
-
-const callbackA = () => {
-  console.log('A');
-  myEmitter.removeListener('event', callbackB);
-};
-
-const callbackB = () => {
-  console.log('B');
-};
-
-myEmitter.on('event', callbackA);
-
-myEmitter.on('event', callbackB);
-
-// callbackA removes listener callbackB but it will still be called.
-// Internal listener array at time of emit [callbackA, callbackB]
-myEmitter.emit('event');
-// Prints:
-//   A
-//   B
-
-// callbackB is now removed.
-// Internal listener array [callbackA]
-myEmitter.emit('event');
-// Prints:
-//   A
-```
-
-Because listeners are managed using an internal array, calling this will
-change the position indices of any listener registered _after_ the listener
-being removed. This will not impact the order in which listeners are called,
-but it means that any copies of the listener array as returned by
-the `emitter.listeners()` method will need to be recreated.
-
-When a single function has been added as a handler multiple times for a single
-event (as in the example below), `removeListener()` will remove the most
-recently added instance. In the example the `once('ping')`listener is removed:
-
-```js
-const ee = new EventEmitter();
-
-function pong() {
-  console.log('pong');
-}
-
-ee.on('ping', pong);
-ee.once('ping', pong);
-ee.removeListener('ping', pong);
-
-ee.emit('ping');
-ee.emit('ping');
-```
-
-Returns a reference to the `EventEmitter`, so that calls can be chained.
-
-**`Since`**
-
-v0.1.26
+▸ **removeListener**(`eventName`, `listener`): [`Cluster`](Cluster.md)
 
 #### Parameters
 
@@ -1377,43 +1244,57 @@ v0.1.26
 
 #### Returns
 
-[`default`](default.md)
+[`Cluster`](Cluster.md)
 
-#### Inherited from
+#### Overrides
 
 EventEmitter.removeListener
 
 #### Defined in
 
-node_modules/@types/node/ts4.8/events.d.ts:494
+src/cluster.ts:120
 
 ___
 
-### sendMessage
+### request
 
-▸ **sendMessage**(`command`, `payload`, `force?`): `void`
+▸ **request**(`requireIntegrity`, `method`, ...`parameters`): `Promise`<[`RequestResponse`](../README.md#requestresponse)\>
+
+Calls a method on the remote server with the supplied parameters.
+
+ *
+
+**`Throws`**
+
+if not enough clients are connected
+
+**`Throws`**
+
+if no response is received with sufficient integrity
 
 #### Parameters
 
-| Name | Type | Default value |
+| Name | Type | Description |
 | :------ | :------ | :------ |
-| `command` | `string` | `undefined` |
-| `payload` | ``null`` \| `Buffer` | `undefined` |
-| `force` | `boolean` | `false` |
+| `requireIntegrity` | `boolean` | ensure all connections within strategy respond with the same data |
+| `method` | `string` | name of the method to call. |
+| `...parameters` | [`RPCParameter`](../README.md#rpcparameter)[] | one or more parameters for the method. |
 
 #### Returns
 
-`void`
+`Promise`<[`RequestResponse`](../README.md#requestresponse)\>
+
+a promise that resolves with the result of the method.
 
 #### Defined in
 
-[src/index.ts:140](https://github.com/kevinejohn/bsv-p2p/blob/master/src/index.ts#L140)
+src/cluster.ts:291
 
 ___
 
 ### setMaxListeners
 
-▸ **setMaxListeners**(`n`): [`default`](default.md)
+▸ **setMaxListeners**(`n`): [`Cluster`](Cluster.md)
 
 By default `EventEmitter`s will print a warning if more than `10` listeners are
 added for a particular event. This is a useful default that helps finding
@@ -1434,7 +1315,7 @@ v0.3.5
 
 #### Returns
 
-[`default`](default.md)
+[`Cluster`](Cluster.md)
 
 #### Inherited from
 
@@ -1446,23 +1327,244 @@ node_modules/@types/node/ts4.8/events.d.ts:520
 
 ___
 
-### streamBlock
+### shutdown
 
-▸ **streamBlock**(`chunk`): `void`
+▸ **shutdown**(`retainSubscriptions?`): `Promise`<`void`[]\>
+
+Disconnects all servers from the cluster. Removes all event listeners and
+handlers from all underlying clients and connections. This includes all
+active subscriptions, unless retainSubscriptions is set to true.
+
+#### Parameters
+
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `retainSubscriptions` | `boolean` | `false` | retain subscription data so they will be restored on reconnection. |
+
+#### Returns
+
+`Promise`<`void`[]\>
+
+a list with the disconnection result for every client
+
+#### Defined in
+
+src/cluster.ts:689
+
+___
+
+### startup
+
+▸ **startup**(): `Promise`<`void`[]\>
+
+Connects all servers from the cluster and attaches event listeners and handlers
+for all underlying clients and connections.
+
+**`Throws`**
+
+if the cluster's version is not a valid version string.
+
+#### Returns
+
+`Promise`<`void`[]\>
+
+#### Defined in
+
+src/cluster.ts:640
+
+___
+
+### subscribe
+
+▸ **subscribe**(`callback`, `method`): `Promise`<`Function`\>
+
+Subscribes to the method at the cluster and attaches the callback function to the event feed.
+
+**`Throws`**
+
+if not enough clients are connected
+
+**`Throws`**
+
+if no response is received with sufficient integrity for the initial request
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `callback` | [`SubscribeCallback`](../README.md#subscribecallback) | a function that should get notification messages. |
+| `method` | `string` | one of the subscribable methods the server supports. |
+
+#### Returns
+
+`Promise`<`Function`\>
+
+a promise resolving to true when the subscription is set up.
+
+#### Defined in
+
+src/cluster.ts:491
+
+___
+
+### watchAddressTransactions
+
+▸ **watchAddressTransactions**(`cashaddr`, `callback`): [`CancelWatch`](../README.md#cancelwatch)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `chunk` | `Buffer` |
+| `cashaddr` | `string` |
+| `callback` | (`transaction`: `default`) => `void` |
 
 #### Returns
 
-`void`
+[`CancelWatch`](../README.md#cancelwatch)
 
 #### Defined in
 
-[src/index.ts:159](https://github.com/kevinejohn/bsv-p2p/blob/master/src/index.ts#L159)
+src/cluster.ts:818
+
+___
+
+### watchDSProofIds
+
+▸ **watchDSProofIds**(`callback`): [`CancelWatch`](../README.md#cancelwatch)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `callback` | (`dspId`: `Buffer`) => `void` |
+
+#### Returns
+
+[`CancelWatch`](../README.md#cancelwatch)
+
+#### Defined in
+
+src/cluster.ts:856
+
+___
+
+### watchDSProofs
+
+▸ **watchDSProofs**(`callback`): [`CancelWatch`](../README.md#cancelwatch)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `callback` | (`dsProof`: `default`) => `void` |
+
+#### Returns
+
+[`CancelWatch`](../README.md#cancelwatch)
+
+#### Defined in
+
+src/cluster.ts:873
+
+___
+
+### watchMempoolRawTransactions
+
+▸ **watchMempoolRawTransactions**(`callback`): [`CancelWatch`](../README.md#cancelwatch)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `callback` | (`rawTransaction`: `Buffer`) => `void` |
+
+#### Returns
+
+[`CancelWatch`](../README.md#cancelwatch)
+
+#### Defined in
+
+src/cluster.ts:798
+
+___
+
+### watchMempoolTransactionHashes
+
+▸ **watchMempoolTransactionHashes**(`callback`): [`CancelWatch`](../README.md#cancelwatch)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `callback` | (`txHash`: `Buffer`) => `void` |
+
+#### Returns
+
+[`CancelWatch`](../README.md#cancelwatch)
+
+#### Defined in
+
+src/cluster.ts:791
+
+___
+
+### watchMempoolTransactions
+
+▸ **watchMempoolTransactions**(`callback`): [`CancelWatch`](../README.md#cancelwatch)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `callback` | (`transaction`: `default`) => `void` |
+
+#### Returns
+
+[`CancelWatch`](../README.md#cancelwatch)
+
+#### Defined in
+
+src/cluster.ts:808
+
+___
+
+### watchNewBlocks
+
+▸ **watchNewBlocks**(`callback`): [`CancelWatch`](../README.md#cancelwatch)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `callback` | (`blockHash`: `Buffer`) => `void` |
+
+#### Returns
+
+[`CancelWatch`](../README.md#cancelwatch)
+
+#### Defined in
+
+src/cluster.ts:784
+
+___
+
+### watchRawDSProofs
+
+▸ **watchRawDSProofs**(`callback`): [`CancelWatch`](../README.md#cancelwatch)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `callback` | (`rawDsProof`: `Buffer`) => `void` |
+
+#### Returns
+
+[`CancelWatch`](../README.md#cancelwatch)
+
+#### Defined in
+
+src/cluster.ts:863
 
 ___
 

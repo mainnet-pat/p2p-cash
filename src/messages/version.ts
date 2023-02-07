@@ -1,4 +1,4 @@
-import { utils } from "bsv-minimal";
+import { utils } from "bitcoin-minimal";
 
 import crypto from "crypto";
 import Address, { MessageAddress } from "./address";
@@ -13,21 +13,21 @@ const VERSION_OBJ = {
   services: Buffer.from("0000000000000000", "hex"),
   // services: new BN(0),
   // timestamp: ,
-  addr_recv: {
+  addrRecv: {
     services: Buffer.alloc(8, 0),
     // services: new BN(0),
     ip: Buffer.alloc(16, 0),
     port: 0,
   },
-  addr_from: {
+  addrFrom: {
     services: Buffer.alloc(8, 0),
     // services: new BN(0),
     ip: Buffer.alloc(16, 0),
     port: 0,
   },
   nonce: crypto.randomBytes(8),
-  // user_agent: ,
-  // start_height: 0,
+  // userAgent: ,
+  // startHeight: 0,
   relay: Buffer.from([1]), // Receive mempool txs
 } as const;
 
@@ -41,11 +41,11 @@ function read(payload: Buffer | utils.BufferReader) {
     // services : br.readUInt64LE(,
     services: br.readReverse(8),
     timestamp: br.readUInt64LE(),
-    addr_recv: Address.read(br, true),
-    addr_from: Address.read(br, true),
+    addrRecv: Address.read(br, true),
+    addrFrom: Address.read(br, true),
     nonce: br.read(8),
-    user_agent: br.readVarLengthBuffer().toString(),
-    start_height: br.readUInt32LE(),
+    userAgent: br.readVarLengthBuffer().toString(),
+    startHeight: br.readUInt32LE(),
     relay: br.readUInt8(),
   };
   // if (!br.eof()) throw new Error(`Invalid payload`)
@@ -53,21 +53,21 @@ function read(payload: Buffer | utils.BufferReader) {
 }
 
 export type VersionOptions = {
-  user_agent?: string;
+  userAgent?: string;
   timestamp?: bigint;
   version?: number;
   services?: Buffer;
-  addr_recv?: MessageAddress;
-  addr_from?: MessageAddress;
+  addrRecv?: MessageAddress;
+  addrFrom?: MessageAddress;
   nonce?: Buffer;
-  start_height?: number;
+  startHeight?: number;
   relay?: Buffer;
 };
 
 export interface WriteVersionOptions {
   ticker: string;
-  user_agent?: string;
-  start_height?: number;
+  userAgent?: string;
+  startHeight?: number;
   mempoolTxs: boolean;
   version: number;
   options?: VersionOptions;
@@ -75,17 +75,17 @@ export interface WriteVersionOptions {
 
 function write({
   ticker,
-  user_agent: userAgent,
-  start_height: startHeight,
+  userAgent: _userAgent,
+  startHeight: _startHeight,
   mempoolTxs,
-  version: versionParam,
+  version: _version,
   options,
 }: WriteVersionOptions) {
   options = {
     ...VERSION_OBJ,
-    user_agent: userAgent,
-    start_height: startHeight,
-    version: versionParam,
+    userAgent: _userAgent,
+    startHeight: _startHeight,
+    version: _version,
     relay: mempoolTxs ? Buffer.from([1]) : Buffer.from([0]),
     ...options,
   };
@@ -93,11 +93,11 @@ function write({
     version = VERSIONS[ticker] || VERSIONS.DEFAULT,
     services = VERSION_OBJ.services,
     timestamp = BigInt(Math.round(+new Date() / 1000)),
-    addr_recv = VERSION_OBJ.addr_recv,
-    addr_from = VERSION_OBJ.addr_from,
+    addrRecv = VERSION_OBJ.addrRecv,
+    addrFrom = VERSION_OBJ.addrFrom,
     nonce = VERSION_OBJ.nonce,
-    user_agent = USER_AGENTS[ticker] || USER_AGENTS.DEFAULT,
-    start_height = 0,
+    userAgent = USER_AGENTS[ticker] || USER_AGENTS.DEFAULT,
+    startHeight = 0,
     relay = VERSION_OBJ.relay,
   } = options;
 
@@ -106,12 +106,12 @@ function write({
   // bw.writeUInt64LE(services)
   bw.writeReverse(services);
   bw.writeUInt64LE(timestamp);
-  bw.write(Address.write(addr_recv));
-  bw.write(Address.write(addr_from));
+  bw.write(Address.write(addrRecv));
+  bw.write(Address.write(addrFrom));
   bw.write(nonce);
-  bw.writeVarintNum(Buffer.from(user_agent).length);
-  bw.write(Buffer.from(user_agent));
-  bw.writeUInt32LE(start_height);
+  bw.writeVarintNum(Buffer.from(userAgent).length);
+  bw.write(Buffer.from(userAgent));
+  bw.writeUInt32LE(startHeight);
   bw.write(relay);
   return bw.toBuffer();
 }
