@@ -45,7 +45,7 @@
 
 #### Defined in
 
-src/interfaces.ts:16
+[src/interfaces.ts:16](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L16)
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 #### Defined in
 
-src/interfaces.ts:11
+[src/interfaces.ts:11](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L11)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-src/interfaces.ts:12
+[src/interfaces.ts:12](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L12)
 
 ___
 
@@ -87,7 +87,7 @@ ___
 
 #### Defined in
 
-src/interfaces.ts:15
+[src/interfaces.ts:15](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L15)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 #### Defined in
 
-src/interfaces.ts:21
+[src/interfaces.ts:21](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L21)
 
 ___
 
@@ -115,7 +115,7 @@ ___
 
 #### Defined in
 
-src/interfaces.ts:17
+[src/interfaces.ts:17](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L17)
 
 ___
 
@@ -125,7 +125,7 @@ ___
 
 #### Defined in
 
-src/interfaces.ts:25
+[src/interfaces.ts:25](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L25)
 
 ___
 
@@ -139,7 +139,7 @@ ___
 
 #### Defined in
 
-src/interfaces.ts:14
+[src/interfaces.ts:14](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L14)
 
 ___
 
@@ -149,7 +149,7 @@ ___
 
 #### Defined in
 
-src/interfaces.ts:26
+[src/interfaces.ts:26](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L26)
 
 ___
 
@@ -163,7 +163,7 @@ ___
 
 #### Defined in
 
-src/interfaces.ts:13
+[src/interfaces.ts:13](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L13)
 
 ___
 
@@ -177,7 +177,7 @@ ___
 
 #### Defined in
 
-src/interfaces.ts:20
+[src/interfaces.ts:20](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L20)
 
 ___
 
@@ -191,7 +191,7 @@ ___
 
 #### Defined in
 
-src/interfaces.ts:8
+[src/interfaces.ts:8](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L8)
 
 ___
 
@@ -205,7 +205,7 @@ ___
 
 #### Defined in
 
-src/interfaces.ts:7
+[src/interfaces.ts:7](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L7)
 
 ___
 
@@ -219,7 +219,7 @@ ___
 
 #### Defined in
 
-src/interfaces.ts:10
+[src/interfaces.ts:10](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L10)
 
 ___
 
@@ -233,7 +233,7 @@ ___
 
 #### Defined in
 
-src/interfaces.ts:6
+[src/interfaces.ts:6](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L6)
 
 ___
 
@@ -247,7 +247,7 @@ ___
 
 #### Defined in
 
-src/interfaces.ts:19
+[src/interfaces.ts:19](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L19)
 
 ___
 
@@ -261,7 +261,7 @@ ___
 
 #### Defined in
 
-src/interfaces.ts:9
+[src/interfaces.ts:9](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L9)
 
 ___
 
@@ -275,7 +275,7 @@ ___
 
 #### Defined in
 
-src/interfaces.ts:18
+[src/interfaces.ts:18](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L18)
 
 ___
 
@@ -285,7 +285,7 @@ ___
 
 #### Defined in
 
-src/interfaces.ts:27
+[src/interfaces.ts:27](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L27)
 
 ___
 
@@ -295,4 +295,4 @@ ___
 
 #### Defined in
 
-src/interfaces.ts:28
+[src/interfaces.ts:28](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L28)

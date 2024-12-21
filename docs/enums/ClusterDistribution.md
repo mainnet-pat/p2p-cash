@@ -22,4 +22,4 @@ Send requests to all servers in the cluster.
 
 #### Defined in
 
-src/interfaces.ts:250
+[src/interfaces.ts:250](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L250)

@@ -27,7 +27,7 @@ Send requests to servers in the cluster in the order they were added.
 
 #### Defined in
 
-src/interfaces.ts:240
+[src/interfaces.ts:240](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L240)
 
 ___
 
@@ -37,4 +37,4 @@ ___
 
 #### Defined in
 
-src/interfaces.ts:239
+[src/interfaces.ts:239](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L239)

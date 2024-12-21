@@ -27,7 +27,7 @@ The client is available for use.
 
 #### Defined in
 
-src/interfaces.ts:276
+[src/interfaces.ts:276](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L276)
 
 ___
 
@@ -37,4 +37,4 @@ ___
 
 #### Defined in
 
-src/interfaces.ts:275
+[src/interfaces.ts:275](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L275)

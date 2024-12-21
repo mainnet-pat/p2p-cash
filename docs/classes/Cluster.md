@@ -109,7 +109,7 @@ EventEmitter.constructor
 
 #### Defined in
 
-src/cluster.ts:69
+[src/cluster.ts:69](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L69)
 
 ## Properties
 
@@ -123,7 +123,7 @@ src/cluster.ts:69
 
 #### Defined in
 
-src/cluster.ts:37
+[src/cluster.ts:37](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L37)
 
 ___
 
@@ -133,7 +133,7 @@ ___
 
 #### Defined in
 
-src/cluster.ts:59
+[src/cluster.ts:59](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L59)
 
 ___
 
@@ -143,7 +143,7 @@ ___
 
 #### Defined in
 
-src/cluster.ts:40
+[src/cluster.ts:40](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L40)
 
 ___
 
@@ -153,7 +153,7 @@ ___
 
 #### Defined in
 
-src/cluster.ts:46
+[src/cluster.ts:46](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L46)
 
 ___
 
@@ -163,7 +163,7 @@ ___
 
 #### Defined in
 
-src/cluster.ts:52
+[src/cluster.ts:52](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L52)
 
 ___
 
@@ -177,7 +177,7 @@ ___
 
 #### Defined in
 
-src/cluster.ts:49
+[src/cluster.ts:49](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L49)
 
 ___
 
@@ -187,7 +187,7 @@ ___
 
 #### Defined in
 
-src/cluster.ts:55
+[src/cluster.ts:55](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L55)
 
 ___
 
@@ -197,7 +197,7 @@ ___
 
 #### Defined in
 
-src/cluster.ts:43
+[src/cluster.ts:43](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L43)
 
 ___
 
@@ -207,7 +207,7 @@ ___
 
 #### Defined in
 
-src/cluster.ts:34
+[src/cluster.ts:34](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L34)
 
 ___
 
@@ -217,7 +217,7 @@ ___
 
 #### Defined in
 
-src/cluster.ts:61
+[src/cluster.ts:61](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L61)
 
 ___
 
@@ -227,7 +227,7 @@ ___
 
 #### Defined in
 
-src/cluster.ts:57
+[src/cluster.ts:57](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L57)
 
 ___
 
@@ -318,7 +318,7 @@ EventEmitter.addListener
 
 #### Defined in
 
-src/cluster.ts:107
+[src/cluster.ts:107](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L107)
 
 ___
 
@@ -347,7 +347,7 @@ a promise that resolves when the connection has been initiated.
 
 #### Defined in
 
-src/cluster.ts:141
+[src/cluster.ts:141](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L141)
 
 ___
 
@@ -368,7 +368,7 @@ ___
 
 #### Defined in
 
-src/cluster.ts:748
+[src/cluster.ts:748](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L748)
 
 ___
 
@@ -389,7 +389,7 @@ ___
 
 #### Defined in
 
-src/cluster.ts:753
+[src/cluster.ts:753](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L753)
 
 ___
 
@@ -405,7 +405,7 @@ Force connect all added servers
 
 #### Defined in
 
-src/cluster.ts:629
+[src/cluster.ts:629](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L629)
 
 ___
 
@@ -421,7 +421,7 @@ Alias for shutdown
 
 #### Defined in
 
-src/cluster.ts:676
+[src/cluster.ts:676](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L676)
 
 ___
 
@@ -546,7 +546,7 @@ ___
 
 #### Defined in
 
-src/cluster.ts:780
+[src/cluster.ts:780](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L780)
 
 ___
 
@@ -569,7 +569,7 @@ ___
 
 #### Defined in
 
-src/cluster.ts:727
+[src/cluster.ts:727](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L727)
 
 ___
 
@@ -589,7 +589,7 @@ ___
 
 #### Defined in
 
-src/cluster.ts:776
+[src/cluster.ts:776](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L776)
 
 ___
 
@@ -609,7 +609,7 @@ ___
 
 #### Defined in
 
-src/cluster.ts:852
+[src/cluster.ts:852](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L852)
 
 ___
 
@@ -629,7 +629,7 @@ ___
 
 #### Defined in
 
-src/cluster.ts:848
+[src/cluster.ts:848](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L848)
 
 ___
 
@@ -652,7 +652,7 @@ ___
 
 #### Defined in
 
-src/cluster.ts:715
+[src/cluster.ts:715](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L715)
 
 ___
 
@@ -691,7 +691,7 @@ ___
 
 #### Defined in
 
-src/cluster.ts:739
+[src/cluster.ts:739](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L739)
 
 ___
 
@@ -705,7 +705,7 @@ ___
 
 #### Defined in
 
-src/cluster.ts:743
+[src/cluster.ts:743](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L743)
 
 ___
 
@@ -725,7 +725,7 @@ ___
 
 #### Defined in
 
-src/cluster.ts:883
+[src/cluster.ts:883](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L883)
 
 ___
 
@@ -745,7 +745,7 @@ ___
 
 #### Defined in
 
-src/cluster.ts:844
+[src/cluster.ts:844](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L844)
 
 ___
 
@@ -765,7 +765,7 @@ ___
 
 #### Defined in
 
-src/cluster.ts:840
+[src/cluster.ts:840](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L840)
 
 ___
 
@@ -785,7 +785,7 @@ ___
 
 #### Defined in
 
-src/cluster.ts:764
+[src/cluster.ts:764](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L764)
 
 ___
 
@@ -805,7 +805,7 @@ ___
 
 #### Defined in
 
-src/cluster.ts:760
+[src/cluster.ts:760](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L760)
 
 ___
 
@@ -825,7 +825,7 @@ ___
 
 #### Defined in
 
-src/cluster.ts:772
+[src/cluster.ts:772](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L772)
 
 ___
 
@@ -845,7 +845,7 @@ ___
 
 #### Defined in
 
-src/cluster.ts:768
+[src/cluster.ts:768](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L768)
 
 ___
 
@@ -938,7 +938,7 @@ EventEmitter.off
 
 #### Defined in
 
-src/cluster.ts:116
+[src/cluster.ts:116](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L116)
 
 ___
 
@@ -963,7 +963,7 @@ EventEmitter.on
 
 #### Defined in
 
-src/cluster.ts:102
+[src/cluster.ts:102](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L102)
 
 ___
 
@@ -1036,7 +1036,7 @@ ___
 
 #### Defined in
 
-src/cluster.ts:887
+[src/cluster.ts:887](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L887)
 
 ___
 
@@ -1191,7 +1191,7 @@ a promise that resolves when the required servers are available.
 
 #### Defined in
 
-src/cluster.ts:580
+[src/cluster.ts:580](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L580)
 
 ___
 
@@ -1252,7 +1252,7 @@ EventEmitter.removeListener
 
 #### Defined in
 
-src/cluster.ts:120
+[src/cluster.ts:120](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L120)
 
 ___
 
@@ -1288,7 +1288,7 @@ a promise that resolves with the result of the method.
 
 #### Defined in
 
-src/cluster.ts:291
+[src/cluster.ts:291](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L291)
 
 ___
 
@@ -1349,7 +1349,7 @@ a list with the disconnection result for every client
 
 #### Defined in
 
-src/cluster.ts:689
+[src/cluster.ts:689](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L689)
 
 ___
 
@@ -1370,7 +1370,7 @@ if the cluster's version is not a valid version string.
 
 #### Defined in
 
-src/cluster.ts:640
+[src/cluster.ts:640](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L640)
 
 ___
 
@@ -1403,7 +1403,7 @@ a promise resolving to true when the subscription is set up.
 
 #### Defined in
 
-src/cluster.ts:491
+[src/cluster.ts:491](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L491)
 
 ___
 
@@ -1424,7 +1424,7 @@ ___
 
 #### Defined in
 
-src/cluster.ts:818
+[src/cluster.ts:818](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L818)
 
 ___
 
@@ -1444,7 +1444,7 @@ ___
 
 #### Defined in
 
-src/cluster.ts:856
+[src/cluster.ts:856](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L856)
 
 ___
 
@@ -1464,7 +1464,7 @@ ___
 
 #### Defined in
 
-src/cluster.ts:873
+[src/cluster.ts:873](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L873)
 
 ___
 
@@ -1484,7 +1484,7 @@ ___
 
 #### Defined in
 
-src/cluster.ts:798
+[src/cluster.ts:798](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L798)
 
 ___
 
@@ -1504,7 +1504,7 @@ ___
 
 #### Defined in
 
-src/cluster.ts:791
+[src/cluster.ts:791](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L791)
 
 ___
 
@@ -1524,7 +1524,7 @@ ___
 
 #### Defined in
 
-src/cluster.ts:808
+[src/cluster.ts:808](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L808)
 
 ___
 
@@ -1544,7 +1544,7 @@ ___
 
 #### Defined in
 
-src/cluster.ts:784
+[src/cluster.ts:784](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L784)
 
 ___
 
@@ -1564,7 +1564,7 @@ ___
 
 #### Defined in
 
-src/cluster.ts:863
+[src/cluster.ts:863](https://github.com/mainnet-pat/p2p-cash/blob/master/src/cluster.ts#L863)
 
 ___
 

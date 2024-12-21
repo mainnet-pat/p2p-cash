@@ -28,4 +28,4 @@
 
 #### Defined in
 
-src/interfaces.ts:156
+[src/interfaces.ts:156](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L156)

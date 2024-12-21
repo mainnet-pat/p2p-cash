@@ -16,4 +16,4 @@
 
 #### Defined in
 
-src/interfaces.ts:118
+[src/interfaces.ts:118](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L118)

@@ -42,7 +42,7 @@ The connection is restarting.
 
 #### Defined in
 
-src/interfaces.ts:291
+[src/interfaces.ts:291](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L291)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-src/interfaces.ts:293
+[src/interfaces.ts:293](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L293)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-src/interfaces.ts:290
+[src/interfaces.ts:290](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L290)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-src/interfaces.ts:292
+[src/interfaces.ts:292](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L292)
 
 ___
 
@@ -82,4 +82,4 @@ ___
 
 #### Defined in
 
-src/interfaces.ts:294
+[src/interfaces.ts:294](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L294)

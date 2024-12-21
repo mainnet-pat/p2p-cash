@@ -25,7 +25,7 @@
 
 #### Defined in
 
-src/interfaces.ts:169
+[src/interfaces.ts:169](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L169)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-src/interfaces.ts:156
+[src/interfaces.ts:156](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L156)
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 #### Defined in
 
-src/interfaces.ts:170
+[src/interfaces.ts:170](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L170)
 
 ___
 
@@ -59,4 +59,4 @@ ___
 
 #### Defined in
 
-src/interfaces.ts:171
+[src/interfaces.ts:171](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L171)

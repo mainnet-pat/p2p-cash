@@ -32,7 +32,7 @@ The cluster is healthy and ready for use.
 
 #### Defined in
 
-src/interfaces.ts:263
+[src/interfaces.ts:263](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L263)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-src/interfaces.ts:262
+[src/interfaces.ts:262](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L262)
 
 ___
 
@@ -52,4 +52,4 @@ ___
 
 #### Defined in
 
-src/interfaces.ts:264
+[src/interfaces.ts:264](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L264)

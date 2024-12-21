@@ -92,7 +92,7 @@ p2p-cash
 
 #### Defined in
 
-src/interfaces.ts:3
+[src/interfaces.ts:3](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L3)
 
 ___
 
@@ -102,7 +102,7 @@ ___
 
 #### Defined in
 
-src/interfaces.ts:199
+[src/interfaces.ts:199](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L199)
 
 ___
 
@@ -112,7 +112,7 @@ ___
 
 #### Defined in
 
-src/interfaces.ts:151
+[src/interfaces.ts:151](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L151)
 
 ___
 
@@ -122,7 +122,7 @@ ___
 
 #### Defined in
 
-src/interfaces.ts:203
+[src/interfaces.ts:203](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L203)
 
 ___
 
@@ -132,7 +132,7 @@ ___
 
 #### Defined in
 
-src/interfaces.ts:196
+[src/interfaces.ts:196](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L196)
 
 ___
 
@@ -142,7 +142,7 @@ ___
 
 #### Defined in
 
-src/interfaces.ts:202
+[src/interfaces.ts:202](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L202)
 
 ___
 
@@ -166,7 +166,7 @@ ___
 
 #### Defined in
 
-src/interfaces.ts:114
+[src/interfaces.ts:114](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L114)
 
 ___
 
@@ -191,7 +191,7 @@ ___
 
 #### Defined in
 
-src/interfaces.ts:110
+[src/interfaces.ts:110](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L110)
 
 ___
 
@@ -203,7 +203,7 @@ A list of possible responses to requests.
 
 #### Defined in
 
-src/interfaces.ts:96
+[src/interfaces.ts:96](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L96)
 
 ___
 
@@ -233,7 +233,7 @@ ___
 
 #### Defined in
 
-src/interfaces.ts:113
+[src/interfaces.ts:113](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L113)
 
 ___
 
@@ -257,7 +257,7 @@ ___
 
 #### Defined in
 
-src/interfaces.ts:106
+[src/interfaces.ts:106](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L106)
 
 ___
 
@@ -269,7 +269,7 @@ Possible Transport Schemes for communication with the Electrum server
 
 #### Defined in
 
-src/interfaces.ts:140
+[src/interfaces.ts:140](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L140)
 
 ## Variables
 
@@ -287,7 +287,7 @@ src/interfaces.ts:140
 
 #### Defined in
 
-[src/messages/address.ts:99](https://github.com/kevinejohn/bsv-p2p/blob/master/src/messages/address.ts#L99)
+[src/messages/address.ts:99](https://github.com/mainnet-pat/p2p-cash/blob/master/src/messages/address.ts#L99)
 
 ___
 
@@ -311,7 +311,7 @@ ___
 
 #### Defined in
 
-src/interfaces.ts:316
+[src/interfaces.ts:316](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L316)
 
 ___
 
@@ -362,7 +362,7 @@ Port and Scheme to use TLS-encrypted WebSockets.
 
 #### Defined in
 
-src/interfaces.ts:308
+[src/interfaces.ts:308](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L308)
 
 ___
 
@@ -379,7 +379,7 @@ ___
 
 #### Defined in
 
-[src/messages/getdata.ts:97](https://github.com/kevinejohn/bsv-p2p/blob/master/src/messages/getdata.ts#L97)
+[src/messages/getdata.ts:97](https://github.com/mainnet-pat/p2p-cash/blob/master/src/messages/getdata.ts#L97)
 
 ___
 
@@ -396,7 +396,7 @@ ___
 
 #### Defined in
 
-[src/messages/headers.ts:41](https://github.com/kevinejohn/bsv-p2p/blob/master/src/messages/headers.ts#L41)
+[src/messages/headers.ts:41](https://github.com/mainnet-pat/p2p-cash/blob/master/src/messages/headers.ts#L41)
 
 ___
 
@@ -413,7 +413,7 @@ ___
 
 #### Defined in
 
-[src/messages/inv.ts:98](https://github.com/kevinejohn/bsv-p2p/blob/master/src/messages/inv.ts#L98)
+[src/messages/inv.ts:98](https://github.com/mainnet-pat/p2p-cash/blob/master/src/messages/inv.ts#L98)
 
 ___
 
@@ -427,7 +427,7 @@ ___
 
 #### Defined in
 
-[src/config.ts:1](https://github.com/kevinejohn/bsv-p2p/blob/master/src/config.ts#L1)
+[src/config.ts:1](https://github.com/mainnet-pat/p2p-cash/blob/master/src/config.ts#L1)
 
 ___
 
@@ -437,7 +437,7 @@ ___
 
 #### Defined in
 
-[src/config.ts:30](https://github.com/kevinejohn/bsv-p2p/blob/master/src/config.ts#L30)
+[src/config.ts:30](https://github.com/mainnet-pat/p2p-cash/blob/master/src/config.ts#L30)
 
 ___
 
@@ -454,7 +454,7 @@ ___
 
 #### Defined in
 
-[src/messages/message.ts:122](https://github.com/kevinejohn/bsv-p2p/blob/master/src/messages/message.ts#L122)
+[src/messages/message.ts:122](https://github.com/mainnet-pat/p2p-cash/blob/master/src/messages/message.ts#L122)
 
 ___
 
@@ -470,7 +470,7 @@ ___
 
 #### Defined in
 
-[src/messages/reject.ts:24](https://github.com/kevinejohn/bsv-p2p/blob/master/src/messages/reject.ts#L24)
+[src/messages/reject.ts:24](https://github.com/mainnet-pat/p2p-cash/blob/master/src/messages/reject.ts#L24)
 
 ___
 
@@ -484,7 +484,7 @@ ___
 
 #### Defined in
 
-[src/config.ts:21](https://github.com/kevinejohn/bsv-p2p/blob/master/src/config.ts#L21)
+[src/config.ts:21](https://github.com/mainnet-pat/p2p-cash/blob/master/src/config.ts#L21)
 
 ___
 
@@ -498,7 +498,7 @@ ___
 
 #### Defined in
 
-[src/config.ts:12](https://github.com/kevinejohn/bsv-p2p/blob/master/src/config.ts#L12)
+[src/config.ts:12](https://github.com/mainnet-pat/p2p-cash/blob/master/src/config.ts#L12)
 
 ___
 
@@ -515,7 +515,7 @@ ___
 
 #### Defined in
 
-[src/messages/version.ts:119](https://github.com/kevinejohn/bsv-p2p/blob/master/src/messages/version.ts#L119)
+[src/messages/version.ts:119](https://github.com/mainnet-pat/p2p-cash/blob/master/src/messages/version.ts#L119)
 
 ___
 
@@ -536,7 +536,7 @@ ___
 
 #### Defined in
 
-src/interfaces.ts:58
+[src/interfaces.ts:58](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L58)
 
 ## Functions
 
@@ -556,7 +556,7 @@ message is RPCErrorResponse
 
 #### Defined in
 
-src/interfaces.ts:205
+[src/interfaces.ts:205](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L205)
 
 ___
 
@@ -576,7 +576,7 @@ message is RPCNotification
 
 #### Defined in
 
-src/interfaces.ts:215
+[src/interfaces.ts:215](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L215)
 
 ___
 
@@ -596,7 +596,7 @@ message is RPCRequest
 
 #### Defined in
 
-src/interfaces.ts:220
+[src/interfaces.ts:220](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L220)
 
 ___
 
@@ -616,7 +616,7 @@ message is RPCStatement
 
 #### Defined in
 
-src/interfaces.ts:210
+[src/interfaces.ts:210](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L210)
 
 ___
 
@@ -636,7 +636,7 @@ object is VersionNegotiated
 
 #### Defined in
 
-src/interfaces.ts:132
+[src/interfaces.ts:132](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L132)
 
 ___
 
@@ -656,4 +656,4 @@ object is VersionRejected
 
 #### Defined in
 
-src/interfaces.ts:127
+[src/interfaces.ts:127](https://github.com/mainnet-pat/p2p-cash/blob/master/src/interfaces.ts#L127)
