@@ -19,6 +19,7 @@ export interface Options {
   userAgent?: string; // user agent to communicate to the remote peers
   startHeight?: number; // maximum block height to report to communicate to remote peers
   listenRelay?: boolean; // listen for newly relayed transactions, blocks and dsProofs
+	logger?: any; // custom logger, defaults to `console`
 }
 
 export interface PeerOptions extends Options {

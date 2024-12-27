@@ -18,7 +18,6 @@ import CustomEvents from "./events";
 import Socket from "./socket";
 import { CashAddress, Hash } from "bitcoin-minimal/lib/utils";
 import { CancelWatch, DefaultParameters, PeerOptions, debug } from "./interfaces";
-import { resolve } from "path";
 
 export class Peer extends EventEmitter {
   node: string;
@@ -56,6 +55,7 @@ export class Peer extends EventEmitter {
   connectOptions?: VersionOptions;
   promiseConnect?: any;
   peerVersion?: ReturnType<typeof Version.read>;
+  logger: Console;
 
   keepAliveTimer?: NodeJS.Timeout;
 
@@ -81,6 +81,7 @@ export class Peer extends EventEmitter {
     wsProxyNode = undefined,
     wsProxyPort = undefined,
     useSSL = undefined,
+    logger = console,
   }: PeerOptions) {
     super();
     this.setMaxListeners(0);
@@ -89,6 +90,7 @@ export class Peer extends EventEmitter {
     this.userAgent = userAgent;
     this.startHeight = startHeight;
     this.listenRelay = listenRelay;
+    this.logger = logger;
 
     this.port = port || 8333;
     if (!port && node.split(":").length > 1) {
@@ -136,7 +138,7 @@ export class Peer extends EventEmitter {
 			this.keepAliveTimer = setTimeout(async() => {
         this.clearKeepAlive();
         try {
-          await this.ping(2);
+          await this.ping(30);
           this.setupKeepAlive();
         } catch {
           this.disconnect(this.autoReconnect);
@@ -165,7 +167,7 @@ export class Peer extends EventEmitter {
       extmsg,
     });
     if (!this.socket) throw Error("Socket not connected");
-    this.socket.write(serialized);
+    this.socket.write(serialized as any);
     debug.client(`Sent message ${command} ${
           payload ? payload.length : "0"
         } bytes`
@@ -433,7 +435,7 @@ export class Peer extends EventEmitter {
     }
   }
 
-  connect(options = this.connectOptions) {
+  connect(options = this.connectOptions): Promise<void> {
     if (!this.promiseConnect) {
       this.promiseConnect = new Promise<void>((resolve, reject) => {
         this.connectOptions = options;
@@ -496,10 +498,10 @@ export class Peer extends EventEmitter {
             }
 
             if (buffers.length >= buffers.needed) {
-              this.readMessage(Buffer.concat(buffers.data));
+              this.readMessage(Buffer.concat(buffers.data as any));
             }
           } catch (error: any) {
-            const buffer = Buffer.concat(buffers.data);
+            const buffer = Buffer.concat(buffers.data as any);
             debug.errors(`client: on data error. Disconnecting. buffer: ${buffer.toString(
                   "hex"
                 )}`,
@@ -593,15 +595,17 @@ export class Peer extends EventEmitter {
     to?: GetHeadersOptions["to"];
     timeoutSeconds?: number;
   }): Promise<Header[]> {
-    const { version } = this;
-    const payload = Headers.getheaders({ from, to, version });
-    this.sendMessage("getheaders", payload);
-    const headers: Header[] = await this.emitter.wait(
-      "headers",
-      null,
-      timeoutSeconds
-    );
-    return headers;
+    return this.withRetry(async () => {
+      const { version } = this;
+      const payload = Headers.getheaders({ from, to, version });
+      this.sendMessage("getheaders", payload);
+      const headers: Header[] = await this.emitter.wait(
+        "headers",
+        null,
+        timeoutSeconds
+      );
+      return headers;
+    });
   }
 
   async getBlockHashes({
@@ -627,10 +631,12 @@ export class Peer extends EventEmitter {
   }
 
   async getMempool(): Promise<Buffer[]> {
-    this.sendMessage("mempool", null);
-    this.nextInvIsMessageResponse = true;
-    const inv = await this.emitter.wait("inv");
-    return inv.txs;
+    return this.withRetry(async () => {
+      this.sendMessage("mempool", null);
+      this.nextInvIsMessageResponse = true;
+      const inv = await this.emitter.wait("inv");
+      return inv.txs;
+    });
   }
 
   async getMempoolTransactions(): Promise<Transaction[]> {
@@ -686,19 +692,21 @@ export class Peer extends EventEmitter {
   }
 
   async getRawTransactions(txHashes: Buffer[]): Promise<Buffer[]> {
-    if (txHashes.length === 0) return [];
-    if (txHashes.length > MAX_PER_MSG)
-      throw Error(`Too many transactions (${MAX_PER_MSG} max)`);
+    return this.withRetry(async () => {
+      if (txHashes.length === 0) return [];
+      if (txHashes.length > MAX_PER_MSG)
+        throw Error(`Too many transactions (${MAX_PER_MSG} max)`);
 
-    const payload = GetData.write({ txs: txHashes });
-    this.sendMessage("getdata", payload);
-    const result = await Promise.allSettled(txHashes.map(tx => this.emitter.wait(`tx_${tx.toString("hex")}`, [`notfound_tx_${tx.toString("hex")}`, `reject_${tx.toString("hex")}`])));
-    const rejected = result.filter(val => val.status === "rejected");
-    if (rejected.length) {
-      throw Error(rejected.map(val => JSON.stringify((val as PromiseRejectedResult).reason?.message)).join("\n"));
-    }
+      const payload = GetData.write({ txs: txHashes });
+      this.sendMessage("getdata", payload);
+      const result = await Promise.allSettled(txHashes.map(tx => this.emitter.wait(`tx_${tx.toString("hex")}`, [`notfound_tx_${tx.toString("hex")}`, `reject_${tx.toString("hex")}`])));
+      const rejected = result.filter(val => val.status === "rejected");
+      if (rejected.length) {
+        throw Error(rejected.map(val => JSON.stringify((val as PromiseRejectedResult).reason?.message)).join("\n"));
+      }
 
-    return result.map(val => (val as PromiseFulfilledResult<Buffer>).value);
+      return result.map(val => (val as PromiseFulfilledResult<Buffer>).value);
+    });
   }
 
   async getRawTransaction(txHash: Buffer): Promise<Buffer> {
@@ -717,25 +725,27 @@ export class Peer extends EventEmitter {
   }
 
   async getBlocks(blockHashes: Buffer[]): Promise<Block[]> {
-    if (blockHashes.length === 0) return [];
-    if (blockHashes.length > MAX_PER_MSG)
-      throw Error(`Too many blocks (${MAX_PER_MSG} max)`);
+    return this.withRetry(async () => {
+      if (blockHashes.length === 0) return [];
+      if (blockHashes.length > MAX_PER_MSG)
+        throw Error(`Too many blocks (${MAX_PER_MSG} max)`);
 
-    const payload = GetData.write({ blocks: blockHashes });
-    this.sendMessage("getdata", payload);
-    const result = await Promise.allSettled(blockHashes.map(async (blockHash) => {
-      const hex = blockHash.toString("hex");
-      return await Promise.race([
-        this.emitter.wait(`block_${hex}`, [`notfound_block_${hex}`, `reject_${hex}`]),
-        new Promise((_, reject) => setTimeout(() => reject(Error(`Block ${hex} not found`)), 2000))
-      ])
-    }));
-    const rejected = result.filter(val => val.status === "rejected");
-    if (rejected.length) {
-      throw Error(rejected.map(val => JSON.stringify((val as PromiseRejectedResult).reason?.message)).join("\n"));
-    }
+      const payload = GetData.write({ blocks: blockHashes });
+      this.sendMessage("getdata", payload);
+      const result = await Promise.allSettled(blockHashes.map(async (blockHash) => {
+        const hex = blockHash.toString("hex");
+        return await Promise.race([
+          this.emitter.wait(`block_${hex}`, [`notfound_block_${hex}`, `reject_${hex}`]),
+          new Promise((_, reject) => setTimeout(() => reject(Error(`Block ${hex} not found`)), blockHashes.length * 10000))
+        ])
+      }));
+      const rejected = result.filter(val => val.status === "rejected");
+      if (rejected.length) {
+        throw Error(rejected.map(val => JSON.stringify((val as PromiseRejectedResult).reason?.message)).join("\n"));
+      }
 
-    return result.map(val => (val as PromiseFulfilledResult<Block>).value);
+      return result.map(val => (val as PromiseFulfilledResult<Block>).value);
+    });
   }
 
   async getBlock(blockHash: Buffer): Promise<Block> {
@@ -871,5 +881,25 @@ export class Peer extends EventEmitter {
     this.sendMessage("ping", nonce);
     await this.emitter.wait(`pong_${id}`, null, timeoutSeconds);
     return +new Date() - date;
+  }
+
+  private delays = [10, 100, 500, 2000, 10000, 20000]
+
+  async withRetry<T>(
+    fn: () => Promise<T>,
+  ): Promise<T> {
+    let retry = 0;
+    while (true) {
+      const delay = this.delays[retry] ?? this.delays[this.delays.length - 1];
+      try {
+        return await fn();
+      } catch (err: any) {
+        this.logger.warn({
+          reason: err.message,
+        }, 'p2p call failure. retrying in ' + delay + 'ms');
+        await new Promise((resolve) => setTimeout(resolve, delay));
+        retry++;
+      }
+    }
   }
 }
