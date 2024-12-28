@@ -736,7 +736,7 @@ export class Peer extends EventEmitter {
         const hex = blockHash.toString("hex");
         return await Promise.race([
           this.emitter.wait(`block_${hex}`, [`notfound_block_${hex}`, `reject_${hex}`]),
-          new Promise((_, reject) => setTimeout(() => reject(Error(`Block ${hex} not found`)), blockHashes.length * 10000))
+          new Promise((_, reject) => setTimeout(() => reject(Error(`Timeout receiving block ${hex}`)), blockHashes.length * 30000))
         ])
       }));
       const rejected = result.filter(val => val.status === "rejected");
